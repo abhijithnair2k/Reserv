@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+
+}
+
+.bend{
+    display: flex;
+    justify-content: center;
+}
+.search{
+    background-color: burlywood;
+    height: 250px;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+
+    background-position-y: -26rem;
+    background-image: url(https://img.freepik.com/free-vector/flat-travel-background_23-2148050086.jpg?size=626&ext=jpg&ga=GA1.1.1279404829.1689535899&semt=ais);
+}
+ #s4{
+    height: 60px;
+    width: 300px;
+    border: none;
+    outline: none;
+    font-size: large;
+    
+
+} 
+#s1{
+    border-bottom-left-radius:15px ;
+    border-top-left-radius: 15px;
+
+}
+#s5{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /* border-top-left-radius: 15px; */
+
+}
+input::placeholder{
+    font-size: 15px;
+    color: black;
+    border: none;
+}
+#btn{
+    padding-left: px;
+    margin-left: 30px;
+    border-radius: 20px;
+    border: none;
+    width: 90px;
+    color: darkkhaki;
+
+}
+#s1,#s2{
+    display: flex;
+    align-items: center;
+    background-color: azure;
+
+}
+#s5>input[type=date]{
+    font-size: 20px;
+}

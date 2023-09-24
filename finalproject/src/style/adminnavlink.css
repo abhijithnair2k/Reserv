@@ -1,0 +1,11 @@
+.adminnavlink{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:cadetblue;
+    height: 50px;
+    align-items: center;
+}
+
+.adminnavlink>a{
+     text-decoration: none;
+}

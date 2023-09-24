@@ -1,0 +1,15 @@
+.createbus{
+    /* display:flex; */
+    /* justify-content: space-between; */
+    transform: translate(40%);
+    position: relative;
+    top: 30px;
+    border: 2px solid gainsboro;
+}
+.createbus input{
+border: 2px groove black;
+border-radius: 10px;
+height: 40px;
+width: 220px;
+
+}

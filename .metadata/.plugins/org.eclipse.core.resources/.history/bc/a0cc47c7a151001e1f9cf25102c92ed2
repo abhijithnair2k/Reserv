@@ -1,0 +1,34 @@
+package org.jsp.reservationapi.controller;
+
+import org.jsp.reservationapi.dto.Admin;
+import org.jsp.reservationapi.dto.ResponseStructure;
+import org.jsp.reservationapi.repository.AdminRepository;
+import org.jsp.reservationapi.service.AdminService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class AdminController {
+	@Autowired
+	public AdminService service;
+	
+	@PostMapping("/admin")
+	public ResponseEntity<ResponseStructure<Admin>>SaveAdmin( @RequestBody Admin admin){
+		
+       return service.SaveAdmin(admin);
+		
+		
+	}
+	@PutMapping("/admin")
+	public ResponseEntity<ResponseStructure<Admin>>UpdateAdmin( @RequestBody Admin admin){
+		
+	       return service.UpdateAdmin(admin);
+			
+			
+		}
+	
+}

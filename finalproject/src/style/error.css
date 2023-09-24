@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+
+}
+
+#img{
+    background-size: cover;
+    width: 60rem;
+    height: 30rem;
+}
