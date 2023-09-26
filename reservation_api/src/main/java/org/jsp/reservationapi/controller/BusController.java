@@ -37,4 +37,7 @@ public class BusController {
 	public ResponseEntity<ResponseStructure<List<Bus>>> filter(@RequestParam String from,@RequestParam String to, @RequestParam LocalDate dop){
 		return service.filter(from, to, dop);
 	}
+	public ResponseEntity<ResponseStructure<Bus>> updateBus(@RequestBody Bus bus,@PathVariable int admin_id){
+		return service.updateBus(bus,admin_id);
+	}
 }

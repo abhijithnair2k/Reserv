@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import '../style/usersignup.css'
+import  pic from '../assets/passengers-waiting-bus-city-queue-town-road-flat-vector-illustration-public-transport-urban-lifestyle_74855-8493.avif'
 
 const UserSignUp = () => {
 
@@ -28,12 +29,17 @@ let handleSubmit=()=>{
 
 
   return (
-    <div className='signup'>
-
-        <form action="" className='up'>
+    <div id='bigg'>
+    
+        <div className='signn'>
+          <div className='col-11'>
+           
+        <form action=""  id='formm' className=' flex  flex-col'>
+        <h2 id='titleee' >UserSign Up</h2>
+           <span id='enjoyy' >Create New Account</span>
             <input type="text"  value={name} onChange={(e)=>{SetName(e.target.value)}} placeholder='Enter your name'/>
             <br />
-            <input type="date" value={date} onChange={(e)=>{SetDate(e.target.value)}} />
+            <input type="date" id='date' value={date} onChange={(e)=>{SetDate(e.target.value)}} />
             <br />
             <input type="tel" placeholder='Enter the Phone number' pattern='[0-9]{10}' value={phone} onChange={(e)=>{SetPhone(e.target.value)}} />
             <br />
@@ -43,8 +49,15 @@ let handleSubmit=()=>{
             <br />
             <input type="password"  placeholder='Enter the password' value={password} onChange={(e)=>{SetPassword(e.target.value)}}/>
             <br />
-            <input type="submit"  onClick={handleSubmit}/>
+            <input type="submit"  id='btnb' onClick={handleSubmit}/>
         </form>
+        </div>
+        <div className='col-22'>
+          <img src={pic} alt="" />
+        </div>
+        
+        
+        </div>
     </div>
   )
 }

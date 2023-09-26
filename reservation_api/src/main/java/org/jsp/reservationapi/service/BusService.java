@@ -41,6 +41,24 @@ public class BusService {
 	throw new IdNotFoundException();
 	}
 	
+	public ResponseEntity<ResponseStructure<Bus>> updateBus(Bus bus,int admin_id){
+		Optional<Admin> recAdmin = dao.FindById(admin_id);
+		ResponseStructure<Bus> structure = new ResponseStructure<>();
+		if(recAdmin.isPresent()) {
+			Admin a = recAdmin.get();
+			a.getBus().add(bus);
+			bus.setAdmin(a);
+			dao.UpdateAdmin(a);
+			busDao.updateBus(bus);
+			structure.setData(bus);
+			structure.setMessage("Bus Updated");
+			structure.setStatuscode(HttpStatus.ACCEPTED.value());
+			return new ResponseEntity<ResponseStructure<Bus>>(structure,HttpStatus.ACCEPTED);
+		}
+	throw new IdNotFoundException();
+	}
+	
+	
 	public ResponseEntity<ResponseStructure<List<Bus>>> filter(String from, String to,LocalDate dop){
 		ResponseStructure<List<Bus>> structure = new ResponseStructure<>();
 		structure.setData(busDao.filter(from, to, dop));

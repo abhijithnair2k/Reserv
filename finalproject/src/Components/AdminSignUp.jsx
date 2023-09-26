@@ -38,7 +38,7 @@ const AdminSignUp = () => {
         <h2>Admin Sign Up</h2>
       <form action="">
         <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}} placeholder='Enter Your Name' />
-        <br /><br />
+        
         
         <br /><br />
         <input type="tel" pattern='[0-9]{10}' value={phone} onChange={(e)=>{setPhone(e.target.value)}} placeholder='Enter your Phone' />

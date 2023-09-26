@@ -12,6 +12,7 @@ import AdminSignUp from './Components/AdminSignUp';
 import LandingHomePage from './Components/LandingHomePage';
 import Error from './Components/Error';
 import AdminHomePage from './Components/AdminHomePage';
+import Security from './Components/Security';
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
         <Route path='/adminsignup/*' element={<AdminSignUp/>}/>
         <Route path='/landinghomepage/*' element={<LandingHomePage/>}/>
         <Route path='/*' element={<Error/>}/>
-        <Route path='/adminhomepage/*' element={<AdminHomePage/>}/>
+        <Route path='/adminhomepage/*' element={<Security Child={AdminHomePage} />}/>
       </Routes>
       </BrowserRouter>
      </div>

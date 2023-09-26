@@ -5,6 +5,7 @@ import '../style/adminlogin.css'
 import {useNavigate} from 'react-router'
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+  import admin  from "../assets/adminn.png"
 
 const AdminLogin = (e) => {
     let navigate=useNavigate()
@@ -14,11 +15,12 @@ const AdminLogin = (e) => {
       e.preventDefault()
         axios.post(`http://localhost:7302/admin/verify-by-phone?email=${email}&password=${password}`)
         .then((res)=>{
-          localStorage.setItem('admin' ,JSON.stringify(res.data.data))
+          localStorage.setItem('admin',JSON.stringify(res.data.data))
+          
             console.log("Success");
             
             toast.success("Admin verified")
-            // navigate('/adminhomepage')
+            navigate('/adminhomepage')
         }).catch((e)=>{
           // alert("invalid email or password")
           toast.error("invalid admin details")
@@ -32,8 +34,11 @@ const AdminLogin = (e) => {
           <ToastContainer/>
  
       <div className='formlogin'>
-        <h2>Admin Login</h2>
-      <form action="">
+    
+        <div id='ad'>
+     
+      <form action="" id='forme'>
+      <h2 id='head'>Admin Login</h2>
           
           <input type="email" placeholder='Enter your email' value={email} onChange={(e)=>{SetEmail(e.target.value)}} />
           <br />
@@ -41,8 +46,12 @@ const AdminLogin = (e) => {
           <br /><br />
 
           <button id='bt1' onClick={adminlogin}>Login</button>
-          <p>New Admin? Click here for <Link to='/adminsignup'>Register</Link></p>
+          <p id='p'>New Admin? Click here for <Link to='/adminsignup'>Register</Link></p>
         </form>
+        </div>
+        <div id='pho'>
+          <img src={admin} alt="" />
+        </div>
       </div>
     </div>
   )

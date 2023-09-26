@@ -1,7 +1,105 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
 
+}
+
+.adminlogin{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(54, 179, 179) ;
+
+}
+.formlogin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 50px;
+  width:70rem;
+  border: transparent;
+  
+  height: 40rem;
+  margin-left: 200px;
+  margin-bottom: -9rem;
+  padding-top: -30px;
+  background-color: rgb(54, 179, 179);
+  
+
+}
+#ad{
+  height: 30rem;
+  width: 30rem;
+ 
+
+}
+#ad>#forme{
+
+  margin-top: 6rem;
+  margin-left: 8rem;
+  
+  
+}
+#forme>#head{
+  margin-bottom:4rem ;
+  font-size: 3rem;
+  
+}
+#ad>#forme>input:focus{
+  outline: none;
+}
+#ad>#forme>input{
+  
+  border: none;
+  /* border-color: transparent; */
+  display: flex;
+  padding-right: 4rem;
+  flex-direction: column;
+  background-color: transparent;
+  border-bottom: 1px solid black;
+  margin-top: 20px;
+  margin-left: 2rem;
+}
+
+#bt1{
+  height: 40px;
+  width: 8rem;
+  border: none;
+  /* background-color: transparent; */
+  /* margin-top: 1rem; */
+  padding-left: rem;
+  margin-left: 5rem;
+  border-radius: 6px;
+  background-color: blue;
+  color: white;
+  
+}
+#forme>#bt1:hover{
+  transform: scale(1.1);
+  transition: 1s;
+  cursor: pointer;
+
+}
+
+#forme>#p{
+   margin-top: 2rem;
+   font-size: 20px;
+}
+#pho{
+  height: 20rem;
+  width: auto;
+  margin-top: 10rem;
+}
+#pho>img{
+  width: 500px;
+  height: 20rem;
+  object-fit: contain;
+  align-self: flex-end;
+  margin: -3rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /* background-color: #bebcc7; */
+  
 }
 
