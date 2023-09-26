@@ -4,6 +4,9 @@ import '../style/login.css'
 import axios from 'axios'
 import {useNavigate} from 'react-router'
 import image from '../assets/forgot-password-concept-illustration_114360-1123.avif'
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 
 const  UserLogin=()=> {
   let [email,SetEmail]=useState("")
@@ -14,17 +17,20 @@ const  UserLogin=()=> {
     e.preventDefault()
     axios.post(`http://localhost:7302/user/verify-by-phone?email=${email}&password=${password}`)
     .then(()=>{
-      alert("verified successgully")
+      // alert("verified successgully")
+      toast.success("user verified successfully")
       navigate('/landinghomepage')
 
     }).catch((error)=>{
-      alert("invalid email or password")
+      // alert("invalid email or password")
+      toast.error("invalid email or password")
     console.log(error)
     })
   }
   return (
     
     <div id='big'>   
+    <ToastContainer/>
        <div className='register'>
       <div className='col-1'>
       <h2 id='title' >UserLogin</h2>  

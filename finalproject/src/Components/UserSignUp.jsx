@@ -1,6 +1,9 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import '../style/usersignup.css'
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 import  pic from '../assets/passengers-waiting-bus-city-queue-town-road-flat-vector-illustration-public-transport-urban-lifestyle_74855-8493.avif'
 
 const UserSignUp = () => {
@@ -17,12 +20,14 @@ let handleSubmit=()=>{
   axios.post('http://localhost:7302/user',data)
   .then((res)=>{
     
-     alert ("submit successfully")
+    //  alert ("submit successfully")
+    toast.success("User SignUp Successful ")
      console.log("hello")
 
   })
   .catch((error)=>{
-    alert("invalid data")
+    // alert("invalid data")
+    toast.error("invalid Details")
     console.log(error)
   })
 }
@@ -32,6 +37,7 @@ let handleSubmit=()=>{
     <div id='bigg'>
     
         <div className='signn'>
+          <ToastContainer/>
           <div className='col-11'>
            
         <form action=""  id='formm' className=' flex  flex-col'>

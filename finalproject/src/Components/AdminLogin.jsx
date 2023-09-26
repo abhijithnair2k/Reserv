@@ -1,4 +1,5 @@
 import axios from 'axios'
+//const axios = require('./lib/axios.js');
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../style/adminlogin.css'

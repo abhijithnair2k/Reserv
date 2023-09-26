@@ -1,6 +1,11 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import '../style/adminsignup.css'
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
+import immg from '../assets/stock-vector-black-thin-line-hand-holding-golden-key-icon-simple-outline-flat-style-trend-modern-logo-graphic-1921995167.jpg'
 
 const AdminSignUp = () => {
 
@@ -17,13 +22,16 @@ const AdminSignUp = () => {
   
     axios.post('http://localhost:7302/admin',data)
     .then((res)=>{
+      toast.success("Admin Signup success")
     
-       alert ("submit successfully")
+      //  alert ("submit successfully")
        console.log("hello")
   
     })
     .catch((error)=>{
-      alert("invalid data")
+      toast.error("failed to signup")
+
+      // alert("invalid data")
       console.log(error)
     })
   }
@@ -34,9 +42,12 @@ const AdminSignUp = () => {
   // console.log(aadhar);
   return (
     <div className='adminsignup'>
+      <ToastContainer/>
       <div className='formsignup'>
-        <h2>Admin Sign Up</h2>
-      <form action="">
+        <div id='col-111'>
+        
+      <form action="" id='form1' className='flex flex-col'>
+      <h2 id='title1'>Admin Sign Up</h2>
         <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}} placeholder='Enter Your Name' />
         
         
@@ -49,10 +60,15 @@ const AdminSignUp = () => {
         <br /><br />
         <input type="password" placeholder='Enter your Password' value={password} onChange={(e)=>{setPassword(e.target.value)}} />
         <br /><br />
-        <input type="submit" onClick={handleSubmit} />
+        <input type="submit" id='bt2'  onClick={handleSubmit} />
     
         
       </form>
+
+      </div>
+      <div id='col-222'>
+        <img src={immg} alt="" />
+      </div>
       </div>
     </div>
   )
